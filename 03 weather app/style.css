@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+body {
+    background: url('assets/background.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+    background: rgb(0,0,0,0.15);
+    backdrop-filter: blur(15px);
+}
+
+/* UTILITIES */
+.regular-txt {
+    font-weight: 400;
+}
+
+
+/* END UTILITIES */
+
+.main-container {
+    position: relative;
+    border: solid none;
+    width: 340px;
+    height: 580px;
+    z-index: 1;
+    background: url('assets/pexels-eberhardgross-1366919.jpg');
+    background-repeat: round;
+    background-size: 100% auto;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+/* INPUT CONTAINER */
+.input-container {
+    position: absolute;
+    top: 8%;
+}
+
+.city-input {
+    width: 260px;
+    padding: 10px 16px;
+    border-radius: 99px;
+    border: 1px solid white;
+    background: rgb(0,0,0,0.15);
+    outline: none;
+    font-weight: 500;
+    color: white;
+    transition: 0.25s border;
+    padding-right: 45px;
+}
+
+.city-input:focus {
+    border: 3px solid rgb(255,255,255,0.75);
+}
+
+.city-input::placeholder {
+    color: rgb(255, 255, 255, 0.75);
+}
+
+.search-btn {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* END OF INPUT CONTAINER */
+
+/* WEATHER INFO */
+.weather-info {
+    position: absolute;
+    top: 20%;
+    width: 260px;
+    height: 37px;
+    color: white;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 15px;
+}
+
+.location-date-container {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 15px;
+}
+
+.weather-summary-container {
+    border: 2px solid;
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+}
+
+.weather-summary-img {
+    width: 120px;
+    height: 120px;
+}
+
+.weather-summary-info {
+    text-align: end;
+}
+
+.weather-conditions-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    border: 2px solid;
+    padding: 8px;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+}
+
+.condition-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.condition-item span {
+    font-size: 30px;
+}
+
+.forecast-items-container {
+    display: flex;
+    gap: 15px;
+    overflow: scroll;
+    overflow-y: hidden;
+    padding-bottom: 120px;
+}
+
+.forecast-items-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.forecast-items-container::-webkit-scrollbar-track {
+    background: rgba(200,200, 200, 0.5);
+    border-radius: 99px;
+}
+
+.forecast-items-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 99px;
+}
+
+.forecast-item {
+    min-width: 70px;
+    min-height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+.forecast-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.forecast-item-img {
+    width: 35px;
+    height: 35px;
+}
+/* END OF WEATHER INFO */
+
+/* SECTION: MESSAGE */
+.section-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-top: 30%;
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.section-message img {
+    height: 180px;
+    width: fit-content;
+}
+
+/* END OF SECTION: MESSAGE */
+
+
